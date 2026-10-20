@@ -1,0 +1,585 @@
+{
+  "tool": "weightsentry",
+  "version": "0.1.0",
+  "scanned_roots": [
+    "<HOME>\\Desktop\\学术_论文\\26八月论文集\\4_safety_cliff_exp",
+    "<HOME>\\Desktop\\学术_论文\\paper4_CoLoRA",
+    "<HOME>\\Desktop\\项目_开发\\ruzheng_web"
+  ],
+  "artifacts": [
+    {
+      "path": "<HOME>\\Desktop\\学术_论文\\26八月论文集\\4_safety_cliff_exp\\adapters\\output_1000\\adapter_model.safetensors",
+      "size": 161533192,
+      "format": "safetensors",
+      "executable_on_load": false,
+      "note": "8-byte header + raw tensor bytes; no code path",
+      "findings": [],
+      "verdict": "clean",
+      "detail": {
+        "path": "<HOME>\\Desktop\\学术_论文\\26八月论文集\\4_safety_cliff_exp\\adapters\\output_1000\\adapter_model.safetensors",
+        "size": 161533192,
+        "header_bytes": 52480,
+        "tensors": 392,
+        "dtypes": [
+          "F32"
+        ],
+        "metadata": {
+          "format": "pt"
+        },
+        "problems": [],
+        "verdict": "clean"
+      }
+    },
+    {
+      "path": "<HOME>\\Desktop\\学术_论文\\26八月论文集\\4_safety_cliff_exp\\adapters\\output_1000\\training_args.bin",
+      "size": 5905,
+      "format": "zip-torch",
+      "executable_on_load": true,
+      "note": "zip container whose data.pkl is unpickled by torch.load",
+      "findings": [],
+      "verdict": "clean",
+      "detail": [
+        {
+          "source": "<HOME>\\Desktop\\学术_论文\\26八月论文集\\4_safety_cliff_exp\\adapters\\output_1000\\training_args.bin::training_args/data.pkl",
+          "ok": true,
+          "error": null,
+          "exec_ops": 24,
+          "calls": [
+            "accelerate.state.PartialState",
+            "accelerate.utils.dataclasses.DistributedType",
+            "llamafactory.hparams.training_args.TrainingArguments",
+            "torch.device",
+            "transformers.trainer_pt_utils.AcceleratorConfig",
+            "transformers.trainer_utils.HubStrategy",
+            "transformers.trainer_utils.IntervalStrategy",
+            "transformers.trainer_utils.SaveStrategy",
+            "transformers.trainer_utils.SchedulerType",
+            "transformers.training_args.OptimizerNames"
+          ],
+          "suspicious": [],
+          "verdict": "clean"
+        }
+      ]
+    },
+    {
+      "path": "<HOME>\\Desktop\\学术_论文\\26八月论文集\\4_safety_cliff_exp\\adapters\\output_200\\adapter_model.safetensors",
+      "size": 161533192,
+      "format": "safetensors",
+      "executable_on_load": false,
+      "note": "8-byte header + raw tensor bytes; no code path",
+      "findings": [],
+      "verdict": "clean",
+      "detail": {
+        "path": "<HOME>\\Desktop\\学术_论文\\26八月论文集\\4_safety_cliff_exp\\adapters\\output_200\\adapter_model.safetensors",
+        "size": 161533192,
+        "header_bytes": 52480,
+        "tensors": 392,
+        "dtypes": [
+          "F32"
+        ],
+        "metadata": {
+          "format": "pt"
+        },
+        "problems": [],
+        "verdict": "clean"
+      }
+    },
+    {
+      "path": "<HOME>\\Desktop\\学术_论文\\26八月论文集\\4_safety_cliff_exp\\adapters\\output_200\\training_args.bin",
+      "size": 5905,
+      "format": "zip-torch",
+      "executable_on_load": true,
+      "note": "zip container whose data.pkl is unpickled by torch.load",
+      "findings": [],
+      "verdict": "clean",
+      "detail": [
+        {
+          "source": "<HOME>\\Desktop\\学术_论文\\26八月论文集\\4_safety_cliff_exp\\adapters\\output_200\\training_args.bin::training_args/data.pkl",
+          "ok": true,
+          "error": null,
+          "exec_ops": 24,
+          "calls": [
+            "accelerate.state.PartialState",
+            "accelerate.utils.dataclasses.DistributedType",
+            "llamafactory.hparams.training_args.TrainingArguments",
+            "torch.device",
+            "transformers.trainer_pt_utils.AcceleratorConfig",
+            "transformers.trainer_utils.HubStrategy",
+            "transformers.trainer_utils.IntervalStrategy",
+            "transformers.trainer_utils.SaveStrategy",
+            "transformers.trainer_utils.SchedulerType",
+            "transformers.training_args.OptimizerNames"
+          ],
+          "suspicious": [],
+          "verdict": "clean"
+        }
+      ]
+    },
+    {
+      "path": "<HOME>\\Desktop\\学术_论文\\26八月论文集\\4_safety_cliff_exp\\adapters\\output_20\\adapter_model.safetensors",
+      "size": 161533192,
+      "format": "safetensors",
+      "executable_on_load": false,
+      "note": "8-byte header + raw tensor bytes; no code path",
+      "findings": [],
+      "verdict": "clean",
+      "detail": {
+        "path": "<HOME>\\Desktop\\学术_论文\\26八月论文集\\4_safety_cliff_exp\\adapters\\output_20\\adapter_model.safetensors",
+        "size": 161533192,
+        "header_bytes": 52480,
+        "tensors": 392,
+        "dtypes": [
+          "F32"
+        ],
+        "metadata": {
+          "format": "pt"
+        },
+        "problems": [],
+        "verdict": "clean"
+      }
+    },
+    {
+      "path": "<HOME>\\Desktop\\学术_论文\\26八月论文集\\4_safety_cliff_exp\\adapters\\output_20\\training_args.bin",
+      "size": 5905,
+      "format": "zip-torch",
+      "executable_on_load": true,
+      "note": "zip container whose data.pkl is unpickled by torch.load",
+      "findings": [],
+      "verdict": "clean",
+      "detail": [
+        {
+          "source": "<HOME>\\Desktop\\学术_论文\\26八月论文集\\4_safety_cliff_exp\\adapters\\output_20\\training_args.bin::training_args/data.pkl",
+          "ok": true,
+          "error": null,
+          "exec_ops": 24,
+          "calls": [
+            "accelerate.state.PartialState",
+            "accelerate.utils.dataclasses.DistributedType",
+            "llamafactory.hparams.training_args.TrainingArguments",
+            "torch.device",
+            "transformers.trainer_pt_utils.AcceleratorConfig",
+            "transformers.trainer_utils.HubStrategy",
+            "transformers.trainer_utils.IntervalStrategy",
+            "transformers.trainer_utils.SaveStrategy",
+            "transformers.trainer_utils.SchedulerType",
+            "transformers.training_args.OptimizerNames"
+          ],
+          "suspicious": [],
+          "verdict": "clean"
+        }
+      ]
+    },
+    {
+      "path": "<HOME>\\Desktop\\学术_论文\\26八月论文集\\4_safety_cliff_exp\\adapters\\output_50\\adapter_model.safetensors",
+      "size": 161533192,
+      "format": "safetensors",
+      "executable_on_load": false,
+      "note": "8-byte header + raw tensor bytes; no code path",
+      "findings": [],
+      "verdict": "clean",
+      "detail": {
+        "path": "<HOME>\\Desktop\\学术_论文\\26八月论文集\\4_safety_cliff_exp\\adapters\\output_50\\adapter_model.safetensors",
+        "size": 161533192,
+        "header_bytes": 52480,
+        "tensors": 392,
+        "dtypes": [
+          "F32"
+        ],
+        "metadata": {
+          "format": "pt"
+        },
+        "problems": [],
+        "verdict": "clean"
+      }
+    },
+    {
+      "path": "<HOME>\\Desktop\\学术_论文\\26八月论文集\\4_safety_cliff_exp\\adapters\\output_50\\training_args.bin",
+      "size": 5905,
+      "format": "zip-torch",
+      "executable_on_load": true,
+      "note": "zip container whose data.pkl is unpickled by torch.load",
+      "findings": [],
+      "verdict": "clean",
+      "detail": [
+        {
+          "source": "<HOME>\\Desktop\\学术_论文\\26八月论文集\\4_safety_cliff_exp\\adapters\\output_50\\training_args.bin::training_args/data.pkl",
+          "ok": true,
+          "error": null,
+          "exec_ops": 24,
+          "calls": [
+            "accelerate.state.PartialState",
+            "accelerate.utils.dataclasses.DistributedType",
+            "llamafactory.hparams.training_args.TrainingArguments",
+            "torch.device",
+            "transformers.trainer_pt_utils.AcceleratorConfig",
+            "transformers.trainer_utils.HubStrategy",
+            "transformers.trainer_utils.IntervalStrategy",
+            "transformers.trainer_utils.SaveStrategy",
+            "transformers.trainer_utils.SchedulerType",
+            "transformers.training_args.OptimizerNames"
+          ],
+          "suspicious": [],
+          "verdict": "clean"
+        }
+      ]
+    },
+    {
+      "path": "<HOME>\\Desktop\\学术_论文\\26八月论文集\\4_safety_cliff_exp\\adapters\\output_5\\adapter_model.safetensors",
+      "size": 161533192,
+      "format": "safetensors",
+      "executable_on_load": false,
+      "note": "8-byte header + raw tensor bytes; no code path",
+      "findings": [],
+      "verdict": "clean",
+      "detail": {
+        "path": "<HOME>\\Desktop\\学术_论文\\26八月论文集\\4_safety_cliff_exp\\adapters\\output_5\\adapter_model.safetensors",
+        "size": 161533192,
+        "header_bytes": 52480,
+        "tensors": 392,
+        "dtypes": [
+          "F32"
+        ],
+        "metadata": {
+          "format": "pt"
+        },
+        "problems": [],
+        "verdict": "clean"
+      }
+    },
+    {
+      "path": "<HOME>\\Desktop\\学术_论文\\26八月论文集\\4_safety_cliff_exp\\adapters\\output_5\\training_args.bin",
+      "size": 5905,
+      "format": "zip-torch",
+      "executable_on_load": true,
+      "note": "zip container whose data.pkl is unpickled by torch.load",
+      "findings": [],
+      "verdict": "clean",
+      "detail": [
+        {
+          "source": "<HOME>\\Desktop\\学术_论文\\26八月论文集\\4_safety_cliff_exp\\adapters\\output_5\\training_args.bin::training_args/data.pkl",
+          "ok": true,
+          "error": null,
+          "exec_ops": 24,
+          "calls": [
+            "accelerate.state.PartialState",
+            "accelerate.utils.dataclasses.DistributedType",
+            "llamafactory.hparams.training_args.TrainingArguments",
+            "torch.device",
+            "transformers.trainer_pt_utils.AcceleratorConfig",
+            "transformers.trainer_utils.HubStrategy",
+            "transformers.trainer_utils.IntervalStrategy",
+            "transformers.trainer_utils.SaveStrategy",
+            "transformers.trainer_utils.SchedulerType",
+            "transformers.training_args.OptimizerNames"
+          ],
+          "suspicious": [],
+          "verdict": "clean"
+        }
+      ]
+    },
+    {
+      "path": "<HOME>\\Desktop\\学术_论文\\paper4_CoLoRA\\adapters\\code_lora\\adapter_model.safetensors",
+      "size": 161533192,
+      "format": "safetensors",
+      "executable_on_load": false,
+      "note": "8-byte header + raw tensor bytes; no code path",
+      "findings": [],
+      "verdict": "clean",
+      "detail": {
+        "path": "<HOME>\\Desktop\\学术_论文\\paper4_CoLoRA\\adapters\\code_lora\\adapter_model.safetensors",
+        "size": 161533192,
+        "header_bytes": 52480,
+        "tensors": 392,
+        "dtypes": [
+          "F32"
+        ],
+        "metadata": {
+          "format": "pt"
+        },
+        "problems": [],
+        "verdict": "clean"
+      }
+    },
+    {
+      "path": "<HOME>\\Desktop\\学术_论文\\paper4_CoLoRA\\adapters\\math_lora\\adapter_model.safetensors",
+      "size": 61767680,
+      "format": "safetensors",
+      "executable_on_load": false,
+      "note": "8-byte header + raw tensor bytes; no code path",
+      "findings": [
+        "tensors run 99765512B past EOF"
+      ],
+      "verdict": "dangerous",
+      "detail": {
+        "path": "<HOME>\\Desktop\\学术_论文\\paper4_CoLoRA\\adapters\\math_lora\\adapter_model.safetensors",
+        "size": 61767680,
+        "header_bytes": 52480,
+        "tensors": 392,
+        "dtypes": [
+          "F32"
+        ],
+        "metadata": {
+          "format": "pt"
+        },
+        "problems": [
+          "tensors run 99765512B past EOF"
+        ],
+        "verdict": "dangerous"
+      }
+    },
+    {
+      "path": "<HOME>\\Desktop\\项目_开发\\ruzheng_web\\ruzheng-q4.gguf",
+      "size": 4683073504,
+      "format": "gguf",
+      "executable_on_load": false,
+      "note": "tensor + metadata container; parsed, never executed",
+      "findings": [],
+      "verdict": "clean",
+      "detail": {
+        "version": 3,
+        "tensor_count": 339,
+        "kv": {
+          "general.architecture": "qwen2",
+          "general.type": "model",
+          "general.sampling.top_k": null,
+          "general.sampling.top_p": null,
+          "general.sampling.temp": null,
+          "general.name": "Qwen2.5 7B Ruzheng",
+          "general.finetune": "ruzheng",
+          "general.basename": "Qwen2.5",
+          "general.size_label": "7B",
+          "qwen2.block_count": null,
+          "qwen2.context_length": null,
+          "qwen2.embedding_length": null
+        }
+      }
+    }
+  ],
+  "ollama": [
+    {
+      "name": "registry.ollama.ai/library/qwen2.5:0.5b",
+      "manifest": "<HOME>\\.ollama\\models\\manifests\\registry.ollama.ai\\library\\qwen2.5\\0.5b",
+      "total_bytes": 397821319,
+      "errors": [],
+      "verdict": "dangerous",
+      "blobs": [
+        {
+          "media": "model",
+          "digest": "sha256:c5396e06af294bd1",
+          "declared_mb": 379.38,
+          "sha256_match": false,
+          "zerofill": true
+        },
+        {
+          "media": "system",
+          "digest": "sha256:66b9ea09bd5b7099",
+          "declared_mb": 0.0,
+          "sha256_match": true,
+          "zerofill": null
+        },
+        {
+          "media": "template",
+          "digest": "sha256:eb4402837c7829a6",
+          "declared_mb": 0.0,
+          "sha256_match": true,
+          "zerofill": null
+        },
+        {
+          "media": "license",
+          "digest": "sha256:832dd9e00a68dd83",
+          "declared_mb": 0.01,
+          "sha256_match": true,
+          "zerofill": null
+        },
+        {
+          "media": "v1+json",
+          "digest": "sha256:005f95c7475154a1",
+          "declared_mb": 0.0,
+          "sha256_match": true,
+          "zerofill": null
+        }
+      ]
+    },
+    {
+      "name": "registry.ollama.ai/library/qwen2.5:1.5b",
+      "manifest": "<HOME>\\.ollama\\models\\manifests\\registry.ollama.ai\\library\\qwen2.5\\1.5b",
+      "total_bytes": 986061892,
+      "errors": [],
+      "verdict": "clean",
+      "blobs": [
+        {
+          "media": "model",
+          "digest": "sha256:183715c435899236",
+          "declared_mb": 940.37,
+          "sha256_match": true,
+          "zerofill": null
+        },
+        {
+          "media": "system",
+          "digest": "sha256:66b9ea09bd5b7099",
+          "declared_mb": 0.0,
+          "sha256_match": true,
+          "zerofill": null
+        },
+        {
+          "media": "template",
+          "digest": "sha256:eb4402837c7829a6",
+          "declared_mb": 0.0,
+          "sha256_match": true,
+          "zerofill": null
+        },
+        {
+          "media": "license",
+          "digest": "sha256:832dd9e00a68dd83",
+          "declared_mb": 0.01,
+          "sha256_match": true,
+          "zerofill": null
+        },
+        {
+          "media": "v1+json",
+          "digest": "sha256:377ac4d7aeefd5b8",
+          "declared_mb": 0.0,
+          "sha256_match": true,
+          "zerofill": null
+        }
+      ]
+    },
+    {
+      "name": "registry.ollama.ai/library/qwen2.5:14b",
+      "manifest": "<HOME>\\.ollama\\models\\manifests\\registry.ollama.ai\\library\\qwen2.5\\14b",
+      "total_bytes": 8988124069,
+      "errors": [],
+      "verdict": "dangerous",
+      "blobs": [
+        {
+          "media": "model",
+          "digest": "sha256:2049f5674b1e92b4",
+          "declared_mb": 8571.73,
+          "sha256_match": false,
+          "zerofill": true
+        },
+        {
+          "media": "system",
+          "digest": "sha256:66b9ea09bd5b7099",
+          "declared_mb": 0.0,
+          "sha256_match": true,
+          "zerofill": null
+        },
+        {
+          "media": "template",
+          "digest": "sha256:eb4402837c7829a6",
+          "declared_mb": 0.0,
+          "sha256_match": true,
+          "zerofill": null
+        },
+        {
+          "media": "license",
+          "digest": "sha256:832dd9e00a68dd83",
+          "declared_mb": 0.01,
+          "sha256_match": true,
+          "zerofill": null
+        },
+        {
+          "media": "v1+json",
+          "digest": "sha256:db59b814cab753a5",
+          "declared_mb": 0.0,
+          "sha256_match": true,
+          "zerofill": null
+        }
+      ]
+    },
+    {
+      "name": "registry.ollama.ai/library/qwen2.5:3b",
+      "manifest": "<HOME>\\.ollama\\models\\manifests\\registry.ollama.ai\\library\\qwen2.5\\3b",
+      "total_bytes": 1929912432,
+      "errors": [],
+      "verdict": "dangerous",
+      "blobs": [
+        {
+          "media": "model",
+          "digest": "sha256:5ee4f07cdb9beadb",
+          "declared_mb": 1840.5,
+          "sha256_match": false,
+          "zerofill": true
+        },
+        {
+          "media": "system",
+          "digest": "sha256:66b9ea09bd5b7099",
+          "declared_mb": 0.0,
+          "sha256_match": true,
+          "zerofill": null
+        },
+        {
+          "media": "template",
+          "digest": "sha256:eb4402837c7829a6",
+          "declared_mb": 0.0,
+          "sha256_match": true,
+          "zerofill": null
+        },
+        {
+          "media": "license",
+          "digest": "sha256:b5c0e5cf74cf51af",
+          "declared_mb": 0.01,
+          "sha256_match": true,
+          "zerofill": null
+        },
+        {
+          "media": "v1+json",
+          "digest": "sha256:161ddde4c9cd07c9",
+          "declared_mb": 0.0,
+          "sha256_match": true,
+          "zerofill": null
+        }
+      ]
+    },
+    {
+      "name": "registry.ollama.ai/library/qwen2.5:7b",
+      "manifest": "<HOME>\\.ollama\\models\\manifests\\registry.ollama.ai\\library\\qwen2.5\\7b",
+      "total_bytes": 4683087332,
+      "errors": [],
+      "verdict": "clean",
+      "blobs": [
+        {
+          "media": "model",
+          "digest": "sha256:2bada8a745067700",
+          "declared_mb": 4466.13,
+          "sha256_match": true,
+          "zerofill": null
+        },
+        {
+          "media": "system",
+          "digest": "sha256:66b9ea09bd5b7099",
+          "declared_mb": 0.0,
+          "sha256_match": true,
+          "zerofill": null
+        },
+        {
+          "media": "template",
+          "digest": "sha256:eb4402837c7829a6",
+          "declared_mb": 0.0,
+          "sha256_match": true,
+          "zerofill": null
+        },
+        {
+          "media": "license",
+          "digest": "sha256:832dd9e00a68dd83",
+          "declared_mb": 0.01,
+          "sha256_match": true,
+          "zerofill": null
+        },
+        {
+          "media": "v1+json",
+          "digest": "sha256:2f15b3218f0552c6",
+          "declared_mb": 0.0,
+          "sha256_match": true,
+          "zerofill": null
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "clean": 12,
+    "review": 0,
+    "dangerous": 1
+  }
+}

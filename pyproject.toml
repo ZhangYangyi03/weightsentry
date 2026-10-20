@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "weightsentry"
+version = "0.1.0"
+description = "Static supply-chain audit for local model artifacts: pickle RCE, safetensors structure, Ollama blob integrity."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "Apache-2.0"}
+authors = [{name = "ZhangYangyi03"}]
+keywords = ["security", "supply-chain", "pickle", "safetensors", "ollama", "machine-learning"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: Apache Software License",
+  "Topic :: Security",
+  "Intended Audience :: Developers",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+weightsentry = "weightsentry.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/ZhangYangyi03/weightsentry"
+
+[tool.setuptools]
+packages = ["weightsentry"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
