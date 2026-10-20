@@ -1,8 +1,0 @@
-weightsentry 0.1.0
-
-verdict   format       size        path
---------- ------------ ----------- ----------------------------------------
-clean     safetensors  154.1 MB    C:\Users\china\Desktop\学术_论文\26八月论文集\4_safety_cliff_exp\adapters\output_1000\adapter_model.safetensors
-clean     zip-torch    0.0 MB      C:\Users\china\Desktop\学术_论文\26八月论文集\4_safety_cliff_exp\adapters\output_1000\training_args.bin
-
-summary: 2 clean, 0 review, 0 dangerous
