@@ -1,282 +1,12 @@
 {
   "tool": "weightsentry",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "scanned_roots": [
-    "<HOME>\\Desktop\\学术_论文\\26八月论文集\\4_safety_cliff_exp",
-    "<HOME>\\Desktop\\学术_论文\\paper4_CoLoRA",
+    "<HOME>\\Desktop\\学术_论文\\paper4_CoLoRA\\adapters",
+    "<HOME>\\Desktop\\项目_开发\\lora_adapter",
     "<HOME>\\Desktop\\项目_开发\\ruzheng_web"
   ],
   "artifacts": [
-    {
-      "path": "<HOME>\\Desktop\\学术_论文\\26八月论文集\\4_safety_cliff_exp\\adapters\\output_1000\\adapter_model.safetensors",
-      "size": 161533192,
-      "format": "safetensors",
-      "executable_on_load": false,
-      "note": "8-byte header + raw tensor bytes; no code path",
-      "findings": [],
-      "verdict": "clean",
-      "detail": {
-        "path": "<HOME>\\Desktop\\学术_论文\\26八月论文集\\4_safety_cliff_exp\\adapters\\output_1000\\adapter_model.safetensors",
-        "size": 161533192,
-        "header_bytes": 52480,
-        "tensors": 392,
-        "dtypes": [
-          "F32"
-        ],
-        "metadata": {
-          "format": "pt"
-        },
-        "problems": [],
-        "verdict": "clean"
-      }
-    },
-    {
-      "path": "<HOME>\\Desktop\\学术_论文\\26八月论文集\\4_safety_cliff_exp\\adapters\\output_1000\\training_args.bin",
-      "size": 5905,
-      "format": "zip-torch",
-      "executable_on_load": true,
-      "note": "zip container whose data.pkl is unpickled by torch.load",
-      "findings": [],
-      "verdict": "clean",
-      "detail": [
-        {
-          "source": "<HOME>\\Desktop\\学术_论文\\26八月论文集\\4_safety_cliff_exp\\adapters\\output_1000\\training_args.bin::training_args/data.pkl",
-          "ok": true,
-          "error": null,
-          "exec_ops": 24,
-          "calls": [
-            "accelerate.state.PartialState",
-            "accelerate.utils.dataclasses.DistributedType",
-            "llamafactory.hparams.training_args.TrainingArguments",
-            "torch.device",
-            "transformers.trainer_pt_utils.AcceleratorConfig",
-            "transformers.trainer_utils.HubStrategy",
-            "transformers.trainer_utils.IntervalStrategy",
-            "transformers.trainer_utils.SaveStrategy",
-            "transformers.trainer_utils.SchedulerType",
-            "transformers.training_args.OptimizerNames"
-          ],
-          "suspicious": [],
-          "verdict": "clean"
-        }
-      ]
-    },
-    {
-      "path": "<HOME>\\Desktop\\学术_论文\\26八月论文集\\4_safety_cliff_exp\\adapters\\output_200\\adapter_model.safetensors",
-      "size": 161533192,
-      "format": "safetensors",
-      "executable_on_load": false,
-      "note": "8-byte header + raw tensor bytes; no code path",
-      "findings": [],
-      "verdict": "clean",
-      "detail": {
-        "path": "<HOME>\\Desktop\\学术_论文\\26八月论文集\\4_safety_cliff_exp\\adapters\\output_200\\adapter_model.safetensors",
-        "size": 161533192,
-        "header_bytes": 52480,
-        "tensors": 392,
-        "dtypes": [
-          "F32"
-        ],
-        "metadata": {
-          "format": "pt"
-        },
-        "problems": [],
-        "verdict": "clean"
-      }
-    },
-    {
-      "path": "<HOME>\\Desktop\\学术_论文\\26八月论文集\\4_safety_cliff_exp\\adapters\\output_200\\training_args.bin",
-      "size": 5905,
-      "format": "zip-torch",
-      "executable_on_load": true,
-      "note": "zip container whose data.pkl is unpickled by torch.load",
-      "findings": [],
-      "verdict": "clean",
-      "detail": [
-        {
-          "source": "<HOME>\\Desktop\\学术_论文\\26八月论文集\\4_safety_cliff_exp\\adapters\\output_200\\training_args.bin::training_args/data.pkl",
-          "ok": true,
-          "error": null,
-          "exec_ops": 24,
-          "calls": [
-            "accelerate.state.PartialState",
-            "accelerate.utils.dataclasses.DistributedType",
-            "llamafactory.hparams.training_args.TrainingArguments",
-            "torch.device",
-            "transformers.trainer_pt_utils.AcceleratorConfig",
-            "transformers.trainer_utils.HubStrategy",
-            "transformers.trainer_utils.IntervalStrategy",
-            "transformers.trainer_utils.SaveStrategy",
-            "transformers.trainer_utils.SchedulerType",
-            "transformers.training_args.OptimizerNames"
-          ],
-          "suspicious": [],
-          "verdict": "clean"
-        }
-      ]
-    },
-    {
-      "path": "<HOME>\\Desktop\\学术_论文\\26八月论文集\\4_safety_cliff_exp\\adapters\\output_20\\adapter_model.safetensors",
-      "size": 161533192,
-      "format": "safetensors",
-      "executable_on_load": false,
-      "note": "8-byte header + raw tensor bytes; no code path",
-      "findings": [],
-      "verdict": "clean",
-      "detail": {
-        "path": "<HOME>\\Desktop\\学术_论文\\26八月论文集\\4_safety_cliff_exp\\adapters\\output_20\\adapter_model.safetensors",
-        "size": 161533192,
-        "header_bytes": 52480,
-        "tensors": 392,
-        "dtypes": [
-          "F32"
-        ],
-        "metadata": {
-          "format": "pt"
-        },
-        "problems": [],
-        "verdict": "clean"
-      }
-    },
-    {
-      "path": "<HOME>\\Desktop\\学术_论文\\26八月论文集\\4_safety_cliff_exp\\adapters\\output_20\\training_args.bin",
-      "size": 5905,
-      "format": "zip-torch",
-      "executable_on_load": true,
-      "note": "zip container whose data.pkl is unpickled by torch.load",
-      "findings": [],
-      "verdict": "clean",
-      "detail": [
-        {
-          "source": "<HOME>\\Desktop\\学术_论文\\26八月论文集\\4_safety_cliff_exp\\adapters\\output_20\\training_args.bin::training_args/data.pkl",
-          "ok": true,
-          "error": null,
-          "exec_ops": 24,
-          "calls": [
-            "accelerate.state.PartialState",
-            "accelerate.utils.dataclasses.DistributedType",
-            "llamafactory.hparams.training_args.TrainingArguments",
-            "torch.device",
-            "transformers.trainer_pt_utils.AcceleratorConfig",
-            "transformers.trainer_utils.HubStrategy",
-            "transformers.trainer_utils.IntervalStrategy",
-            "transformers.trainer_utils.SaveStrategy",
-            "transformers.trainer_utils.SchedulerType",
-            "transformers.training_args.OptimizerNames"
-          ],
-          "suspicious": [],
-          "verdict": "clean"
-        }
-      ]
-    },
-    {
-      "path": "<HOME>\\Desktop\\学术_论文\\26八月论文集\\4_safety_cliff_exp\\adapters\\output_50\\adapter_model.safetensors",
-      "size": 161533192,
-      "format": "safetensors",
-      "executable_on_load": false,
-      "note": "8-byte header + raw tensor bytes; no code path",
-      "findings": [],
-      "verdict": "clean",
-      "detail": {
-        "path": "<HOME>\\Desktop\\学术_论文\\26八月论文集\\4_safety_cliff_exp\\adapters\\output_50\\adapter_model.safetensors",
-        "size": 161533192,
-        "header_bytes": 52480,
-        "tensors": 392,
-        "dtypes": [
-          "F32"
-        ],
-        "metadata": {
-          "format": "pt"
-        },
-        "problems": [],
-        "verdict": "clean"
-      }
-    },
-    {
-      "path": "<HOME>\\Desktop\\学术_论文\\26八月论文集\\4_safety_cliff_exp\\adapters\\output_50\\training_args.bin",
-      "size": 5905,
-      "format": "zip-torch",
-      "executable_on_load": true,
-      "note": "zip container whose data.pkl is unpickled by torch.load",
-      "findings": [],
-      "verdict": "clean",
-      "detail": [
-        {
-          "source": "<HOME>\\Desktop\\学术_论文\\26八月论文集\\4_safety_cliff_exp\\adapters\\output_50\\training_args.bin::training_args/data.pkl",
-          "ok": true,
-          "error": null,
-          "exec_ops": 24,
-          "calls": [
-            "accelerate.state.PartialState",
-            "accelerate.utils.dataclasses.DistributedType",
-            "llamafactory.hparams.training_args.TrainingArguments",
-            "torch.device",
-            "transformers.trainer_pt_utils.AcceleratorConfig",
-            "transformers.trainer_utils.HubStrategy",
-            "transformers.trainer_utils.IntervalStrategy",
-            "transformers.trainer_utils.SaveStrategy",
-            "transformers.trainer_utils.SchedulerType",
-            "transformers.training_args.OptimizerNames"
-          ],
-          "suspicious": [],
-          "verdict": "clean"
-        }
-      ]
-    },
-    {
-      "path": "<HOME>\\Desktop\\学术_论文\\26八月论文集\\4_safety_cliff_exp\\adapters\\output_5\\adapter_model.safetensors",
-      "size": 161533192,
-      "format": "safetensors",
-      "executable_on_load": false,
-      "note": "8-byte header + raw tensor bytes; no code path",
-      "findings": [],
-      "verdict": "clean",
-      "detail": {
-        "path": "<HOME>\\Desktop\\学术_论文\\26八月论文集\\4_safety_cliff_exp\\adapters\\output_5\\adapter_model.safetensors",
-        "size": 161533192,
-        "header_bytes": 52480,
-        "tensors": 392,
-        "dtypes": [
-          "F32"
-        ],
-        "metadata": {
-          "format": "pt"
-        },
-        "problems": [],
-        "verdict": "clean"
-      }
-    },
-    {
-      "path": "<HOME>\\Desktop\\学术_论文\\26八月论文集\\4_safety_cliff_exp\\adapters\\output_5\\training_args.bin",
-      "size": 5905,
-      "format": "zip-torch",
-      "executable_on_load": true,
-      "note": "zip container whose data.pkl is unpickled by torch.load",
-      "findings": [],
-      "verdict": "clean",
-      "detail": [
-        {
-          "source": "<HOME>\\Desktop\\学术_论文\\26八月论文集\\4_safety_cliff_exp\\adapters\\output_5\\training_args.bin::training_args/data.pkl",
-          "ok": true,
-          "error": null,
-          "exec_ops": 24,
-          "calls": [
-            "accelerate.state.PartialState",
-            "accelerate.utils.dataclasses.DistributedType",
-            "llamafactory.hparams.training_args.TrainingArguments",
-            "torch.device",
-            "transformers.trainer_pt_utils.AcceleratorConfig",
-            "transformers.trainer_utils.HubStrategy",
-            "transformers.trainer_utils.IntervalStrategy",
-            "transformers.trainer_utils.SaveStrategy",
-            "transformers.trainer_utils.SchedulerType",
-            "transformers.training_args.OptimizerNames"
-          ],
-          "suspicious": [],
-          "verdict": "clean"
-        }
-      ]
-    },
     {
       "path": "<HOME>\\Desktop\\学术_论文\\paper4_CoLoRA\\adapters\\code_lora\\adapter_model.safetensors",
       "size": 161533192,
@@ -325,6 +55,29 @@
           "tensors run 99765512B past EOF"
         ],
         "verdict": "dangerous"
+      }
+    },
+    {
+      "path": "<HOME>\\Desktop\\项目_开发\\lora_adapter\\adapter_model.safetensors",
+      "size": 161533192,
+      "format": "safetensors",
+      "executable_on_load": false,
+      "note": "8-byte header + raw tensor bytes; no code path",
+      "findings": [],
+      "verdict": "clean",
+      "detail": {
+        "path": "<HOME>\\Desktop\\项目_开发\\lora_adapter\\adapter_model.safetensors",
+        "size": 161533192,
+        "header_bytes": 52480,
+        "tensors": 392,
+        "dtypes": [
+          "F32"
+        ],
+        "metadata": {
+          "format": "pt"
+        },
+        "problems": [],
+        "verdict": "clean"
       }
     },
     {
@@ -577,9 +330,208 @@
       ]
     }
   ],
+  "numeric": [
+    {
+      "path": "<HOME>\\Desktop\\学术_论文\\paper4_CoLoRA\\adapters\\code_lora\\adapter_model.safetensors",
+      "kind": "lora",
+      "verdict": "clean",
+      "findings": [],
+      "evidence": {
+        "modules": 196,
+        "bad_modules": 0,
+        "rank": [
+          16
+        ],
+        "energy_median": 0.10958864401475821,
+        "energy_min": 0.03446952850211837,
+        "energy_max": 0.3147432280388407,
+        "max_b_median": 0.001480327919125557,
+        "max_b_min": 0.0013745113974437118,
+        "max_b_max": 0.0015359893441200256,
+        "top1_median": 0.3723294883966446,
+        "top1_max": 0.8055517077445984,
+        "eff_rank_median": 8.55798625946045,
+        "eff_rank_min": 2.4570581912994385,
+        "cohort_cv_max_b": 0.022502227288077662
+      },
+      "cannot_prove": "This compares the shape of the update, not its meaning. A backdoor distributed like ordinary training noise is indistinguishable here, and absence of an anomaly is not absence of a trigger."
+    },
+    {
+      "path": "<HOME>\\Desktop\\学术_论文\\paper4_CoLoRA\\adapters\\math_lora\\adapter_model.safetensors",
+      "kind": "lora",
+      "verdict": "dangerous",
+      "findings": [
+        "124 tensors are truncated -- the file is incomplete"
+      ],
+      "evidence": {
+        "modules": 72,
+        "bad_modules": 0,
+        "rank": [
+          16
+        ],
+        "energy_median": 0.1004162968068198,
+        "energy_min": 0.03309014149825597,
+        "energy_max": 0.24655849231126875,
+        "max_b_median": 0.0014104446163401008,
+        "max_b_min": 0.0013051651185378432,
+        "max_b_max": 0.0014740830520167947,
+        "top1_median": 0.4297165274620056,
+        "top1_max": 0.7219815254211426,
+        "eff_rank_median": 7.111098527908325,
+        "eff_rank_min": 3.3514175415039062,
+        "cohort_cv_max_b": 0.02371289057162458
+      },
+      "cannot_prove": "This compares the shape of the update, not its meaning. A backdoor distributed like ordinary training noise is indistinguishable here, and absence of an anomaly is not absence of a trigger."
+    },
+    {
+      "path": "<HOME>\\Desktop\\项目_开发\\lora_adapter\\adapter_model.safetensors",
+      "kind": "lora",
+      "verdict": "review",
+      "findings": [
+        "model.layers.1.mlp.gate_proj: 97% of the update energy in one direction (median module: 53%)",
+        "model.layers.2.mlp.gate_proj: 94% of the update energy in one direction (median module: 53%)",
+        "model.layers.21.mlp.down_proj: 93% of the update energy in one direction (median module: 53%)",
+        "model.layers.22.mlp.down_proj: 94% of the update energy in one direction (median module: 53%)",
+        "model.layers.23.mlp.down_proj: 92% of the update energy in one direction (median module: 53%)",
+        "model.layers.23.mlp.gate_proj: 91% of the update energy in one direction (median module: 53%)",
+        "model.layers.24.mlp.down_proj: 91% of the update energy in one direction (median module: 53%)",
+        "model.layers.3.mlp.gate_proj: 93% of the update energy in one direction (median module: 53%)",
+        "model.layers.4.mlp.gate_proj: 91% of the update energy in one direction (median module: 53%)",
+        "model.layers.5.mlp.gate_proj: 90% of the update energy in one direction (median module: 53%)",
+        "model.layers.9.mlp.gate_proj: 93% of the update energy in one direction (median module: 53%)"
+      ],
+      "evidence": {
+        "modules": 196,
+        "bad_modules": 0,
+        "rank": [
+          16
+        ],
+        "energy_median": 1.1557511217007757,
+        "energy_min": 0.2290465797080472,
+        "energy_max": 5.623890915779997,
+        "max_b_median": 0.021393870934844017,
+        "max_b_min": 0.012594275176525116,
+        "max_b_max": 0.041787005960941315,
+        "top1_median": 0.5262565314769745,
+        "top1_max": 0.96551913022995,
+        "eff_rank_median": 5.348938465118408,
+        "eff_rank_min": 1.231942892074585,
+        "cohort_cv_max_b": 0.22744249714666517
+      },
+      "cannot_prove": "This compares the shape of the update, not its meaning. A backdoor distributed like ordinary training noise is indistinguishable here, and absence of an anomaly is not absence of a trigger."
+    },
+    {
+      "path": "<HOME>\\Desktop\\项目_开发\\ruzheng_web\\ruzheng-q4.gguf",
+      "kind": "gguf-vs-base",
+      "verdict": "clean",
+      "findings": [
+        "9 tensors differ only in the last bits of float values (a re-save, not an edit)",
+        "pattern is consistent with a LoRA merge: every projection changed, every norm and bias identical",
+        "6 tensors use a different quantization than the base (Q4_K->Q6_K, Q6_K->Q4_K): the finetune was re-quantized with its own recipe, so those tensors cannot be compared byte-wise"
+      ],
+      "evidence": {
+        "tensors_compared": 339,
+        "same": 132,
+        "float_noise_only": 9,
+        "changed": 192,
+        "requantized": 6,
+        "shape_mismatch": 0,
+        "truncated": 0,
+        "by_kind": {
+          "output": {
+            "changed": 1
+          },
+          "norm": {
+            "same": 50,
+            "noise": 7
+          },
+          "embed": {
+            "changed": 1
+          },
+          "bias": {
+            "same": 82,
+            "noise": 2
+          },
+          "attn_proj": {
+            "changed": 110,
+            "requantized": 2
+          },
+          "ffn_proj": {
+            "changed": 80,
+            "requantized": 4
+          }
+        },
+        "unchanged_norms_and_biases": 57,
+        "model_meta": {
+          "general.name": "Qwen2.5 7B Ruzheng",
+          "general.finetune": "ruzheng",
+          "general.basename": "Qwen2.5",
+          "general.size_label": "7B"
+        },
+        "base_meta": {
+          "general.name": "Qwen2.5 7B Instruct",
+          "general.finetune": "Instruct",
+          "general.basename": "Qwen2.5",
+          "general.size_label": "7B"
+        }
+      },
+      "cannot_prove": "This compares the shape of the update, not its meaning. A backdoor distributed like ordinary training noise is indistinguishable here, and absence of an anomaly is not absence of a trigger."
+    },
+    {
+      "path": "<HOME>\\Desktop\\项目_开发\\ruzheng_web\\ruzheng-q4.gguf",
+      "kind": "gguf-embedding",
+      "verdict": "clean",
+      "findings": [],
+      "evidence": {
+        "tensor": "token_embd.weight",
+        "rows": 152064,
+        "blocks_per_row": 14,
+        "scale_median": 9.387731552124023e-05,
+        "scale_p95": 0.00011330842971801758,
+        "scale_max": 0.0011434555053710938,
+        "top_rows": [
+          [
+            11,
+            0.0011434555053710938
+          ],
+          [
+            311,
+            0.0008082389831542969
+          ],
+          [
+            3837,
+            0.0006914138793945312
+          ],
+          [
+            13,
+            0.0006456375122070312
+          ],
+          [
+            264,
+            0.0006265640258789062
+          ],
+          [
+            9370,
+            0.0006055831909179688
+          ],
+          [
+            284,
+            0.0005559921264648438
+          ],
+          [
+            1773,
+            0.0005440711975097656
+          ]
+        ],
+        "ratio_max": 1.1011157035827637,
+        "rows_amplified_over_3.0x": 0
+      },
+      "cannot_prove": "This compares the shape of the update, not its meaning. A backdoor distributed like ordinary training noise is indistinguishable here, and absence of an anomaly is not absence of a trigger."
+    }
+  ],
   "summary": {
-    "clean": 12,
-    "review": 0,
-    "dangerous": 1
+    "clean": 6,
+    "review": 1,
+    "dangerous": 2
   }
 }

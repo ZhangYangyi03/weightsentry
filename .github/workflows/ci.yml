@@ -19,7 +19,7 @@ jobs:
         with:
           python-version: ${{ matrix.python }}
       - run: python -m pip install --upgrade pip
-      - run: pip install -e ".[dev]"
+      - run: pip install -e ".[dev,numeric]"
       - run: pytest -q
       - name: self-audit (must not crash on an empty tree)
         run: python -m weightsentry --no-ollama --json .

@@ -122,10 +122,39 @@ def audit_ollama(roots=None, hash_blobs=True, max_bytes=None):
     return out
 
 
+def run_numeric(files, base=None):
+    """Numeric checks: LoRA structure always, GGUF differential when a base is given."""
+    try:
+        from . import numeric
+    except ImportError as exc:
+        return [{"error": f"numeric layer unavailable: {exc}"}]
+    out = []
+    for p in files:
+        fmt = formats.sniff(p).fmt
+        try:
+            if fmt == "safetensors":
+                rep = numeric.audit_lora(p)
+                if rep.evidence.get("modules"):
+                    out.append(rep.as_dict())
+            elif fmt == "gguf":
+                if base:
+                    out.append(numeric.gguf_baseline_diff(p, base).as_dict())
+                    out.append(numeric.gguf_embedding_outliers(p, base).as_dict())
+                else:
+                    out.append(numeric.gguf_embedding_outliers(p).as_dict())
+        except Exception as exc:                 # a numeric check must never abort a scan
+            out.append({"path": p, "kind": "numeric", "verdict": "review",
+                        "findings": [f"{type(exc).__name__}: {exc}"], "evidence": {}})
+    return out
+
+
 def summarize(report):
     counts = {"clean": 0, "review": 0, "dangerous": 0}
     for r in report["artifacts"]:
         counts[r["verdict"]] = counts.get(r["verdict"], 0) + 1
+    for r in report.get("numeric", []):
+        if "verdict" in r:
+            counts[r["verdict"]] = counts.get(r["verdict"], 0) + 1
     return counts
 
 
@@ -137,6 +166,11 @@ def main(argv=None):
     ap.add_argument("--no-ollama", action="store_true", help="skip the Ollama store")
     ap.add_argument("--no-hash", action="store_true", help="skip blob re-hashing (fast)")
     ap.add_argument("--max-depth", type=int, default=8)
+    ap.add_argument("--numeric", action="store_true",
+                    help="also run the numeric checks (needs numpy)")
+    ap.add_argument("--base", metavar="GGUF",
+                    help="base model to diff a finetuned GGUF against; enables the "
+                         "strongest numeric check")
     ap.add_argument("--fail-on", choices=["never", "review", "dangerous"], default="dangerous",
                     help="exit non-zero at this verdict (default: dangerous)")
     ap.add_argument("--version", action="version", version=__version__)
@@ -149,6 +183,7 @@ def main(argv=None):
         "scanned_roots": roots,
         "artifacts": [audit_file(p) for p in files],
         "ollama": [] if a.no_ollama else audit_ollama(hash_blobs=not a.no_hash),
+        "numeric": run_numeric(files, a.base) if (a.numeric or a.base) else [],
     }
     report["summary"] = summarize(report)
 
@@ -159,7 +194,8 @@ def main(argv=None):
 
     rank = {"clean": 0, "review": 1, "dangerous": 2}
     worst = max([rank[r["verdict"]] for r in report["artifacts"]] +
-                [rank.get(m["verdict"], 0) for m in report["ollama"]] + [0])
+                [rank.get(m["verdict"], 0) for m in report["ollama"]] +
+                [rank.get(n.get("verdict"), 0) for n in report.get("numeric", [])] + [0])
     if a.fail_on == "never":
         return 0
     return 2 if worst > rank[a.fail_on] else 0
@@ -192,6 +228,29 @@ def print_plain(report):
                     why = "all-zero placeholder (interrupted pull)" if b.get("zerofill") \
                         else "content does not match its digest"
                     print("          ! %s: %s" % (b["media"], why))
+    if report.get("numeric"):
+        print("")
+        print("numeric checks")
+        for r in report["numeric"]:
+            if "error" in r:
+                print("  ! %s" % r["error"])
+                continue
+            print("%-9s %-16s %s" % (r["verdict"], r["kind"], r["path"]))
+            ev = r.get("evidence") or {}
+            if r["kind"] == "lora" and ev:
+                print("          %d modules, rank %s, ||dW|| %.3e..%.3e, "
+                      "top-1 energy %.0f%% median" % (
+                          ev.get("modules", 0), ev.get("rank"),
+                          ev.get("energy_min", 0), ev.get("energy_max", 0),
+                          ev.get("top1_median", 0) * 100))
+            if r["kind"] == "gguf-vs-base" and ev:
+                print("          %d identical, %d changed, %d requantized, "
+                      "%d float-noise only" % (
+                          ev.get("same", 0), ev.get("changed", 0),
+                          ev.get("requantized", 0), ev.get("float_noise_only", 0)))
+            for f in r.get("findings", [])[:6]:
+                print("          ! %s" % f)
+
     s = report["summary"]
     print("")
     print("summary: %d clean, %d review, %d dangerous" % (s["clean"], s["review"], s["dangerous"]))
